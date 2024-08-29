@@ -16,7 +16,7 @@ public partial class university_InsertUniversity : System.Web.UI.Page
             int id = Convert.ToInt32(Request.QueryString["id"]);
             int universityID = fac.GetDataByFaculty(id)[0].UniID;
             string facultyName = fac.GetDataByFaculty(id)[0].FacName;
-            string universityName = uni.GetDataByUniversity(id)[0].UniName;
+            string universityName = uni.GetDataByUniversity(universityID)[0].UniName;
 
             txtFacultyName.Text = facultyName;
             universityCombo.Items.Clear();
